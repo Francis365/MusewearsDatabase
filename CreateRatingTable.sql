@@ -1,0 +1,9 @@
+CREATE TABLE "Rating" (
+    "Id" SERIAL PRIMARY KEY,
+    "WearId" VARCHAR REFERENCES "Wear"("Id") ON DELETE CASCADE,
+    "UserId" VARCHAR REFERENCES "AspNetUsers"("Id") ON DELETE CASCADE,
+    "Stars" FLOAT
+);
+
+-- ALTER TABLE "Wear"
+-- RENAME COLUMN "Ratings" TO "Rating";
